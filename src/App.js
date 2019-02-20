@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import launchLogo from './images/launch-logo.png';
-import './App.css';
+import React, { Component } from 'react'
+import launchLogo from './images/launch-logo.png'
+import './App.css'
 
 class App extends Component {
   render() {
@@ -11,10 +11,11 @@ class App extends Component {
           <p>
             A Boilerplate Launch UI React Component Library based on Material UI
           </p>
+          <code>npm run storybook</code>
         </header>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

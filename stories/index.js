@@ -1,6 +1,9 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { Button } from '@storybook/react/demo';
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+import { Button } from '@storybook/react/demo'
+
+import TextField from '@material-ui/core/TextField'
+import Link from '../src/components/Link'
 
 storiesOf('Button', module)
   .add('with text', () => (
@@ -11,4 +14,17 @@ storiesOf('Button', module)
   ))
   .add('white on black', () => (
     <Button>White on Black</Button>
+  ))
+
+storiesOf('Link', module)
+  .add('basic', () => (
+    <Link>Basic Link</Link>
+  ))
+
+storiesOf('Text Field', module)
+  .add('basic', () => (
+    <TextField
+      label="Name"
+      margin="normal"
+    >Basic Text Field</TextField>
   ))

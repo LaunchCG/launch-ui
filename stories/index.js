@@ -1,9 +1,12 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
+import { storiesOf, configure, addDecorator } from '@storybook/react'
 import { Button } from '@storybook/react/demo'
+import { withNotes } from '@storybook/addon-notes';
 
 import TextField from '@material-ui/core/TextField'
 import Link from '../src/components/Link'
+
+addDecorator(withNotes)
 
 storiesOf('Button', module)
   .add('with text', () => (
@@ -22,9 +25,12 @@ storiesOf('Link', module)
   ))
 
 storiesOf('Text Field', module)
-  .add('basic', () => (
-    <TextField
-      label="Name"
-      margin="normal"
-    >Basic Text Field</TextField>
-  ))
+  //.addDecorator(withNotes)
+  .add('basic',
+    () => (
+      <TextField label="Name" >
+        Basic Text Field
+      </TextField>
+    ),
+    { notes: 'Using the basic MUI component.' }
+)

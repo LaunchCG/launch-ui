@@ -7,7 +7,6 @@ import { withStyles } from '@material-ui/core/styles'
 class Link extends PureComponent {
   render() {
     const { children, classes } = this.props
-    console.log('pops',this.props);
     return (
       <span className={classes.base}>
         {children}

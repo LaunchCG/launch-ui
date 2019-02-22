@@ -1,12 +1,11 @@
 import React from 'react'
 import { storiesOf, configure, addDecorator } from '@storybook/react'
 import { muiTheme } from 'storybook-addon-material-ui'
-import { withNotes } from '@storybook/addon-notes';
+import { withNotes } from '@storybook/addon-notes'
 // material ui components
 import TextField from '@material-ui/core/TextField'
-// storybook components
-import { Button } from '@storybook/react/demo'
 // launch wrapper components
+import Button from '../src/components/Button'
 import Link from '../src/components/Link'
 // themes
 import { themeLaunchConfig } from '../src/themes/themeLaunch'
@@ -16,12 +15,12 @@ import { themeDarkConfig } from '../src/themes/themeDark'
 const launchTheme = {
     themeName: 'Launch Theme',
     ...themeLaunchConfig
-};
+}
 
 const darkTheme = {
     themeName: 'Dark Theme',
     ...themeDarkConfig
-};
+}
 
 // global decorators
 
@@ -32,23 +31,31 @@ addDecorator(withNotes)
 addDecorator(muiTheme([
   launchTheme,
   darkTheme
-]));
+]))
 
 // stories
 
 storiesOf('Button', module)
-  .add('with text', () => (
-    <Button>Hello Button</Button>
+  .add('Default', () => (
+    <Button>Default Button</Button>
   ))
-  .add('with some emoji', () => (
-    <Button><span role="img" aria-label="so cool">😀 😎 👍 💯</span></Button>
+  .add('Primary Contained', () => (
+    <Button variant="contained" color="primary">Primary Contained Button</Button>
   ))
-  .add('white on black', () => (
-    <Button>White on Black</Button>
+  .add('Primary Outlined', () => (
+    <Button variant="outlined" color="primary">Primary Outlined Button</Button>
+  ))
+  .add('Primary Text', () => (
+    <Button variant="text" color="primary">Primary Text Button</Button>
+  ))
+  .add('Secondary Contained', () => (
+    <Button variant="contained" color="secondary">Secondary Contained Button</Button>
+  ))
+  .add('Secondary', () => (
+    <Button variant="text" color="secondary">Secondary Text Button</Button>
   ))
 
 storiesOf('Link', module)
-  //.addDecorator(muiTheme([LaunchTheme]))
   .addParameters({ options: { addonPanelInRight: false } })
   .add('basic', () => {
     return (

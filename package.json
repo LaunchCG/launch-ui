@@ -27,8 +27,10 @@
   "devDependencies": {
     "@babel/core": "^7.3.3",
     "@storybook/addon-notes": "^4.1.12",
+    "@storybook/addon-options": "^4.1.13",
     "@storybook/addons": "^4.1.12",
     "@storybook/react": "^4.1.12",
-    "babel-loader": "^8.0.5"
+    "babel-loader": "^8.0.5",
+    "storybook-addon-material-ui": "^0.9.0-alpha.16"
   }
 }

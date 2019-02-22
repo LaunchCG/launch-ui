@@ -1,12 +1,40 @@
 import React from 'react'
 import { storiesOf, configure, addDecorator } from '@storybook/react'
-import { Button } from '@storybook/react/demo'
+import { muiTheme } from 'storybook-addon-material-ui'
 import { withNotes } from '@storybook/addon-notes';
-
+// material ui components
 import TextField from '@material-ui/core/TextField'
+// storybook components
+import { Button } from '@storybook/react/demo'
+// launch wrapper components
 import Link from '../src/components/Link'
+// themes
+import { themeLaunchConfig } from '../src/themes/themeLaunch'
+import { themeDarkConfig } from '../src/themes/themeDark'
+
+// you can specify only required fields overriding the `Launch Base Theme`
+const launchTheme = {
+    themeName: 'Launch Theme',
+    ...themeLaunchConfig
+};
+
+const darkTheme = {
+    themeName: 'Dark Theme',
+    ...themeDarkConfig
+};
+
+// global decorators
 
 addDecorator(withNotes)
+
+// note, due to issue in library only the first theme can be used:
+// TODO add link to issue
+addDecorator(muiTheme([
+  launchTheme,
+  darkTheme
+]));
+
+// stories
 
 storiesOf('Button', module)
   .add('with text', () => (
@@ -20,14 +48,18 @@ storiesOf('Button', module)
   ))
 
 storiesOf('Link', module)
-  .add('basic', () => (
-    <Link>Basic Link</Link>
-  ))
+  //.addDecorator(muiTheme([LaunchTheme]))
+  .addParameters({ options: { addonPanelInRight: false } })
+  .add('basic', () => {
+    return (
+      <Link>Basic Link</Link>
+    )
+  },
+  { options: { addonPanelInRight: false } }
+)
 
 storiesOf('Text Field', module)
-  //.addDecorator(withNotes)
-  .add('basic',
-    () => (
+  .add('basic', () => (
       <TextField label="Name" >
         Basic Text Field
       </TextField>

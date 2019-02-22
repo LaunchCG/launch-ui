@@ -17,9 +17,11 @@ class Link extends PureComponent {
 }
 
 const styles = theme => {
+  const { primary } = theme.palette
   return {
     base: {
       textDecoration: 'underline',
+      color: primary.main,
       '&:hover': {
         cursor: 'pointer'
       }

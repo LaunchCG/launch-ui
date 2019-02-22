@@ -36,9 +36,22 @@ addDecorator(muiTheme([
 // stories
 
 storiesOf('Button', module)
-  .add('Default', () => (
-    <Button>Default Button</Button>
-  ))
+  .addParameters({
+    info: {
+      // components: {
+      //   '0': React.Button
+      // }
+    }
+  })
+  .add(
+    'Default',
+    () => ( <Button>Default Button</Button> ),
+    {
+      info: {
+        text: 'This is a default button'
+      }
+    }
+  )
   .add('Primary Contained', () => (
     <Button variant="contained" color="primary">Primary Contained Button</Button>
   ))

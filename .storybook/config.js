@@ -1,5 +1,12 @@
 import { addDecorator, configure } from '@storybook/react'
 import { withOptions } from '@storybook/addon-options'
+import { withInfo } from '@storybook/addon-info'
+
+addDecorator(
+  withInfo({
+    inline: true,
+    header: false
+  })) // should be declared FIRST
 
 addDecorator(
   withOptions({

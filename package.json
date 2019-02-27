@@ -11,7 +11,8 @@
     "storybook-addon-jsx": "^6.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "react-start": "react-scripts start",
+    "start": "start-storybook -p 9002 -c .storybook",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

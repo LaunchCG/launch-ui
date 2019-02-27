@@ -11,7 +11,7 @@ class App extends Component {
           <p>
             A Boilerplate Launch UI React Component Library based on Material UI
           </p>
-          <code>npm run storybook</code>
+          <code>npm start</code>
         </header>
       </div>
     )

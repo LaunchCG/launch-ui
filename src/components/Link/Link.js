@@ -1,14 +1,18 @@
 import React, { PureComponent, Fragment } from 'react'
 import { withStyles } from '@material-ui/core/styles'
+import classnames from 'classnames'
+import PropTypes from 'prop-types'
+import { launchPalette } from '../../themes/themeLaunch'
 
 // TODO: replace <Fragment /> with react-router link component, or router of choice
 // import ReactLink from 'react-router-dom/Link'
 
 class Link extends PureComponent {
   render() {
-    const { children, classes } = this.props
+    const { children, classes, color } = this.props
+    const allClasses = classnames(classes.root, classes[color])
     return (
-      <span className={classes.base}>
+      <span className={allClasses}>
         {children}
       </span>
     )
@@ -16,16 +20,32 @@ class Link extends PureComponent {
 }
 
 const styles = theme => {
-  const { primary } = theme.palette
+  const { primary, secondary, text } = theme.palette
   return {
-    base: {
+    root: {
       textDecoration: 'underline',
-      color: primary.main,
+      color: text.primary,
       '&:hover': {
         cursor: 'pointer'
       }
+    },
+    primary: {
+      color: primary.main,
+    },
+    secondary: {
+      color: secondary.main,
     }
   }
 }
 
-export default withStyles(styles)(Link)
+const LinkContainer = withStyles(styles)(Link)
+
+LinkContainer.propTypes = {
+  color: PropTypes.string
+}
+
+LinkContainer.defaultProps = {
+  color: launchPalette.black
+}
+
+export default LinkContainer

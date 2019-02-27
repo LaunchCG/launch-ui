@@ -1,11 +1,13 @@
-import { addDecorator, configure } from '@storybook/react'
+import { addDecorator, configure, setAddon } from '@storybook/react'
 import { withOptions } from '@storybook/addon-options'
 import { withInfo } from '@storybook/addon-info'
+import JSXAddon from 'storybook-addon-jsx'
 
 addDecorator(
   withInfo({
     inline: true,
-    header: false
+    header: false,
+    source: false
   })) // should be declared FIRST
 
 addDecorator(
@@ -15,6 +17,8 @@ addDecorator(
     downPanelInRight: false,
   })
 )
+
+setAddon(JSXAddon)
 
 function loadStories() {
   require('../stories/index.js')

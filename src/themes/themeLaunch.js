@@ -36,6 +36,6 @@ const themeLaunchConfig = {
 
 const themeLaunch = createMuiTheme(themeLaunchConfig)
 
-export { themeLaunchConfig }
+export { launchPalette, themeLaunchConfig }
 
 export default themeLaunch

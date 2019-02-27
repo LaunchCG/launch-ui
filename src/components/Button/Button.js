@@ -1,6 +1,9 @@
 import React, { PureComponent } from 'react'
 import MUIButton from '@material-ui/core/Button'
 import { withStyles } from '@material-ui/core/styles'
+import PropTypes from 'prop-types'
+import { compose } from 'redux'
+import { launchPalette } from '../../themes/themeLaunch'
 
 class Button extends PureComponent {
   render() {
@@ -44,4 +47,15 @@ const styles = theme => {
   }
 }
 
-export default withStyles(styles)(Button)
+const ButtonContainer = withStyles(styles)(Button)
+
+ButtonContainer.propTypes = {
+  color: PropTypes.string,
+  children: PropTypes.object
+}
+
+ButtonContainer.defaultProps = {
+  color: launchPalette.black
+}
+
+export default ButtonContainer

@@ -2,6 +2,7 @@ import React from 'react'
 import { storiesOf, configure, addDecorator } from '@storybook/react'
 import { muiTheme } from 'storybook-addon-material-ui'
 import { withNotes } from '@storybook/addon-notes'
+//import { withInfo } from '@storybook/addon-info'
 // material ui components
 import TextField from '@material-ui/core/TextField'
 // launch wrapper components
@@ -36,47 +37,58 @@ addDecorator(muiTheme([
 // stories
 
 storiesOf('Button', module)
-  .addParameters({
-    info: {
-      // components: {
-      //   '0': React.Button
-      // }
-    }
-  })
-  .add(
-    'Default',
-    () => ( <Button>Default Button</Button> ),
-    {
-      info: {
-        text: 'This is a default button'
-      }
-    }
-  )
-  .add('Primary Contained', () => (
-    <Button variant="contained" color="primary">Primary Contained Button</Button>
+  // .addParameters({
+  //   info: {
+  //     //propTables: [MUIButton]
+  //   }
+  // })
+  // .add(
+  //   'Default',
+  //   withInfo({
+  //     text: 'Button Text goes here...'
+  //   })(() => ( <Button>Default Button</Button> ))
+  // )
+  // .add('Primary Contained', () => (
+  //     <Button variant="contained" color="primary">Primary Contained Button</Button>
+  //   ),
+  //   {
+  //     info: {
+  //       text: 'This is a primary button',
+  //       propTablesExclude: [MUIButton]
+  //     }
+  //   }
+  // )
+  .addWithJSX('Default', () => (
+      <Button>Default Button</Button>
   ))
-  .add('Primary Outlined', () => (
+  .addWithJSX('Primary Outlined', () => (
     <Button variant="outlined" color="primary">Primary Outlined Button</Button>
   ))
-  .add('Primary Text', () => (
+  .addWithJSX('Primary Text', () => (
     <Button variant="text" color="primary">Primary Text Button</Button>
   ))
-  .add('Secondary Contained', () => (
+  .addWithJSX('Secondary Contained', () => (
     <Button variant="contained" color="secondary">Secondary Contained Button</Button>
   ))
-  .add('Secondary', () => (
+  .addWithJSX('Secondary', () => (
     <Button variant="text" color="secondary">Secondary Text Button</Button>
   ))
 
 storiesOf('Link', module)
   .addParameters({ options: { addonPanelInRight: false } })
-  .add('basic', () => {
-    return (
-      <Link>Basic Link</Link>
-    )
-  },
-  { options: { addonPanelInRight: false } }
-)
+  .add('Default', () => {
+      return (
+        <Link>Default Link</Link>
+      )
+    },
+    { options: { addonPanelInRight: false } }
+  )
+  .add('Primary', () => (
+    <Link color="primary">Primary Link</Link>
+  ))
+  .add('Secondary', () => (
+    <Link color="secondary">Secondary Link</Link>
+  ))
 
 storiesOf('Text Field', module)
   .add('basic', () => (

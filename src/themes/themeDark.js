@@ -1,21 +1,32 @@
 import { createMuiTheme } from '@material-ui/core/styles'
 
+const launchPalette = {
+  black: '#000000',
+  grey25: '#404040',
+  grey50: '#7f7f7f',
+  grey75: '#202020',
+  white: '#f2f2f2',
+  orange: '#a72f14',
+  skyBlue: '#314965',
+}
+
 const themeDarkConfig = {
   palette: {
-    primary: {
-      main: '#00FF00',
-      light: '#00FF00',
-      dark: '#00FF00',
-      contrastTest: '#00FF00'
+    background: {
+      default: launchPalette.black,
+      paper: launchPalette.black
     },
-    // primary1Color: '#00FF00',
-    // primaryColor: '#00FF00',
-    // alternateTextColor: '#00FF00',
-    // canvasColor: '#00FF00',
-    // textColor: '#00FF00',
-    // secondaryTextColor: '#00FF00',
-    // disabledColor: '#00FF00',
-    // accent1Color: '#00FF00',
+    primary: {
+      main: launchPalette.orange,
+      contrastTest: launchPalette.white
+    },
+    secondary: {
+      main: launchPalette.skyBlue,
+      contrastText: launchPalette.white
+    },
+    text: {
+      primary: launchPalette.white
+    }
   }
 }
 

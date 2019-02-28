@@ -20,10 +20,19 @@ class Summary extends PureComponent {
   }
 
   render() {
-    const { children } = this.props
+    const { children, showCode } = this.props
     const { activeTheme } = this.state
     const theme = createMuiTheme(activeTheme)
     const themeOptions = Object.keys(themes).map( (theme, index) => <option value={theme} key={index}>{theme}</option>)
+
+    const code = (showCode) ?
+        <div>
+          Theme Details:
+          <br/>
+          {JSON.stringify(activeTheme, null, '\t')}
+        </div>
+      :
+        ''
 
     return (
       <MuiThemeProvider theme={theme}>
@@ -34,6 +43,8 @@ class Summary extends PureComponent {
         <br/>
 
         {children}
+
+        {code}
       </MuiThemeProvider>
     )
   }

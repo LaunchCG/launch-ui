@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
+import { withStyles } from '@material-ui/core/styles'
 
 import Example from './Example'
 import ControlWrapper from './ControlWrapper'
 
+import Paper from '@material-ui/core/Paper'
+
 import Button from '../components/Button'
 import Link from '../components/Link'
 
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
-import themeLight, { themeDark } from '../themes'
-
-const theme = createMuiTheme(themeLight)
-
 class Summary extends Component {
   render() {
+    const { classes } = this.props
     return (
-      <Example>
+      <Example showCode>
+        <Paper className={classes.paper}>
           <ControlWrapper>
             <Button>Default Button</Button>
             <Button variant="contained" color="primary">Launch MUI Installed</Button>
@@ -27,9 +27,19 @@ class Summary extends Component {
           <Link>Default Link</Link>
           <Link color="primary">Primary Link</Link>
           <Link color="secondary">Secondary Link</Link>
+        </Paper>
       </Example>
     )
   }
 }
 
-export default Summary
+const styles = theme => {
+  const { palette } = theme
+  return {
+    paper: {
+      padding: '50px 20px'
+    }
+  }
+}
+
+export default withStyles(styles)(Summary)

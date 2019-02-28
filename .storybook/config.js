@@ -22,7 +22,7 @@ setAddon(JSXAddon)
 
 function loadStories() {
   require('../stories/app.js')
-  require('../stories/examples.js')
+  //require('../stories/examples.js')
   require('../stories/index.js')
 }
 

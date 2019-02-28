@@ -17,6 +17,10 @@ const launchPalette = {
 const themeLaunchConfig = {
   palette: {
     colors: launchPalette,
+    background: {
+      default: launchPalette.white,
+      paper: launchPalette.white
+    },
     primary: {
       main: launchPalette.orange,
       contrastText: launchPalette.white

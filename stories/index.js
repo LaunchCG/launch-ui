@@ -59,7 +59,7 @@ storiesOf('Button', module)
   //   }
   // )
   .addWithJSX('Default', () => (
-      <Button>Default Button</Button>
+    <Button>Default Button</Button>
   ))
   .addWithJSX('Primary Outlined', () => (
     <Button variant="outlined" color="primary">Primary Outlined Button</Button>
@@ -76,22 +76,22 @@ storiesOf('Button', module)
 
 storiesOf('Link', module)
   .addParameters({ options: { addonPanelInRight: false } })
-  .add('Default', () => {
+  .addWithJSX('Default', () => {
       return (
         <Link>Default Link</Link>
       )
     },
     { options: { addonPanelInRight: false } }
   )
-  .add('Primary', () => (
+  .addWithJSX('Primary', () => (
     <Link color="primary">Primary Link</Link>
   ))
-  .add('Secondary', () => (
+  .addWithJSX('Secondary', () => (
     <Link color="secondary">Secondary Link</Link>
   ))
 
 storiesOf('Text Field', module)
-  .add('basic', () => (
+  .addWithJSX('basic', () => (
       <TextField label="Name" >
         Basic Text Field
       </TextField>

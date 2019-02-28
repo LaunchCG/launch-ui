@@ -12,6 +12,7 @@ class App extends Component {
             A Boilerplate Launch UI React Component Library based on Material UI
           </p>
           <code>npm start</code>
+          <a href="https://github.com/LaunchCG/launch-ui">https://github.com/LaunchCG/launch-ui</a>
         </header>
       </div>
     )

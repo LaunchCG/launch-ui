@@ -65,7 +65,9 @@ const themeConfig = {
       fontFamily: fonts.regular
     },
     h2: {
-      fontFamily: fonts.regular
+      fontFamily: fonts.regular,
+      marginTop: 'calc(10px + 2vh)',
+      marginBottom: 'calc(5px + 2vh)',
     },
     h1: {
       fontFamily: fonts.regular

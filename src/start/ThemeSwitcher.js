@@ -25,8 +25,6 @@ class ThemeSwitcher extends PureComponent {
     const theme = createMuiTheme(activeTheme)
     const themeOptions = Object.keys(themes).map( (theme, index) => <option value={theme} key={index}>{theme}</option>)
 
-    console.log('activeTheme.palette',activeTheme.palette);
-
     const code = (showCode) ?
         <pre>
           {JSON.stringify(activeTheme, null, 2)}

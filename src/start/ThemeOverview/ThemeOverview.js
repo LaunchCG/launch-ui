@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { withStyles } from '@material-ui/core/styles'
 
-import ThemeSwitcher from './ThemeSwitcher'
+import ThemeSwitcher from '../ThemeSwitcher'
 import ControlWrapper from './ControlWrapper'
 
 import Paper from '@material-ui/core/Paper'
 
-import Button from '../components/Button'
-import Link from '../components/Link'
+import Button from '../../components/Button'
+import Link from '../../components/Link'
 import Typography from '@material-ui/core/Typography'
 
 class ThemeOverview extends Component {
@@ -63,6 +63,8 @@ class ThemeOverview extends Component {
           <Typography variant="caption">caption text</Typography>
           <Typography variant="overline">overline text</Typography>
         </Paper>
+
+        <Typography variant="h2" className={classes.title}>Theme Config Object</Typography>
       </ThemeSwitcher>
     )
   }
@@ -76,7 +78,7 @@ const styles = theme => {
     },
     title:  {
       color: '#000',
-      fontFamily: 'Roboto'
+      fontFamily: 'Roboto',
     }
   }
 }

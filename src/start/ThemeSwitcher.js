@@ -8,7 +8,7 @@ const themes = {
   dark: themeDark
 }
 
-class Summary extends PureComponent {
+class ThemeSwitcher extends PureComponent {
   state = {
     activeTheme: themes.light
   }
@@ -25,12 +25,12 @@ class Summary extends PureComponent {
     const theme = createMuiTheme(activeTheme)
     const themeOptions = Object.keys(themes).map( (theme, index) => <option value={theme} key={index}>{theme}</option>)
 
+    console.log('activeTheme.palette',activeTheme.palette);
+
     const code = (showCode) ?
-        <div>
-          Theme Details:
-          <br/>
-          {JSON.stringify(activeTheme, null, '\t')}
-        </div>
+        <pre>
+          {JSON.stringify(activeTheme, null, 2)}
+        </pre>
       :
         ''
 
@@ -40,7 +40,7 @@ class Summary extends PureComponent {
         <select onChange={this.onChangeTheme}>
           {themeOptions}
         </select>
-        <br/>
+        <br/><br/>
 
         {children}
 
@@ -50,4 +50,4 @@ class Summary extends PureComponent {
   }
 }
 
-export default Summary
+export default ThemeSwitcher

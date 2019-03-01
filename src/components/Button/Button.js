@@ -3,7 +3,7 @@ import MUIButton from '@material-ui/core/Button'
 import { withStyles } from '@material-ui/core/styles'
 import PropTypes from 'prop-types'
 import { compose } from 'redux'
-import { launchPalette } from '../../themes/themeLaunch'
+import { palette } from '../../themes/themeLaunch'
 
 class Button extends PureComponent {
   render() {
@@ -55,7 +55,7 @@ ButtonContainer.propTypes = {
 }
 
 ButtonContainer.defaultProps = {
-  color: launchPalette.black
+  color: palette.black
 }
 
 export default ButtonContainer

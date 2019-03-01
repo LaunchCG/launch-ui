@@ -1,7 +1,9 @@
-import Summary from './Summary'
+import ThemeOverview from './ThemeOverview'
 import Swatch from './Swatch'
+import Config from './Config'
 
 export {
-  Summary,
-  Swatch
+  ThemeOverview,
+  Swatch,
+  Config
 }

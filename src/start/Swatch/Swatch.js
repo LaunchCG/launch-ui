@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
 import { withStyles } from '@material-ui/core/styles'
 
-import Example from '../Example'
+import ThemeSwitcher from '../ThemeSwitcher'
 import Color from './Color'
 
-import { launchPalette } from '../../themes/themeLaunch'
+import { palette } from '../../themes/themeLaunch'
 
 class Swatch extends Component {
   render() {
     const { classes } = this.props
-    const colors = Object.keys(launchPalette).map( (name, index) => <Color key={index} color={launchPalette[name]} name={name}/>)
+    const colors = Object.keys(palette).map( (name, index) => <Color key={index} color={palette[name]} name={name}/>)
     return (
-      <Example showCode={false}>
+      <ThemeSwitcher showCode={false}>
         {colors}
-      </Example>
+      </ThemeSwitcher>
     )
   }
 }

@@ -11,7 +11,6 @@ All MUI components are accessible using the recommendations listed in their API.
 - [Autocomplete](https://material-ui.com/demos/autocomplete/)
   - No naitive component.  Multiple libraries are recommended in MUI. Launch wrapper component uses [react-select](https://react-select.com/home).
 - [Avatars](https://material-ui.com/demos/avatars/)
-- Backdrop
 - [Badges](https://material-ui.com/demos/badges/)
 - Bottom Navigation
 - Buttons
@@ -19,7 +18,6 @@ All MUI components are accessible using the recommendations listed in their API.
 - Checkbox
 - Chips
 - CirclularProgress
-- Collapse
 - CssBaseline
 - Dialogs
 - Dividers
@@ -30,11 +28,14 @@ All MUI components are accessible using the recommendations listed in their API.
 - Menus
 - Paper
 - Pickers
+- Popover
 - Progress
+- Radio
 - Selection Controls
 - Selects
 - Snackbars
 - Steppers
+- Switch
 - Tables
 - Tabs
 - Text Fields

@@ -60,14 +60,16 @@ The following components are custom components created by Launch. They may, or m
 - Footer
   - Global footer
 - DateTime
+  - uses html5
 - Link
-- Markdown
-
+  - Dependent on react-router
 
 ## Questionable
 
 The following components need discussion as to whether or not they deserve a wrapper component
 
 - Dialog -> Modal
+  - Do we want to include redux dependent components?
 - Notification Manager
   - Do we want to include redux dependent components?
+- Markdown

@@ -82,4 +82,3 @@ The following components need discussion as to whether or not they deserve a wra
   - Do we want to include redux dependent components?
 - Notification Manager
   - Do we want to include redux dependent components?
-- Markdown

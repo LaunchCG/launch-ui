@@ -34,3 +34,23 @@ All MUI components are accessible using the recommendations listed in their API.
 - Tabs
 - Text Fields
 - Tooltips
+
+## Custom Components
+
+The following components are custom components created by Launch. They may, or may not, include additional libraries.
+
+- Page
+- Header
+- Footer
+- DateTime
+- Link
+- Markdown
+
+
+## Questionable
+
+The following components need discussion as to whether or not they deserve a wrapper component
+
+- Dialog -> Modal
+- Notification Manager
+  - Do we want to include redux dependent components?

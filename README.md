@@ -8,51 +8,18 @@ A Boilerplate Launch UI React Component Library based on Material UI
 - [ ] Component is built generic enough that it can be used by simply passing properties
 - [ ] If creating a wrapper on a 3rd party library (such as MUI), wrapper component must be warranted and add value
 
-## Material UI Components
+### Material UI Components
 
 Using version: 3.9.2
 
-All MUI components are accessible using the recommendations listed in their API.  Some components have custom wrapper components.  Custom wrapper components have descriptions below.  If a component is not listed, or does not have a description, use it directly from the MUI library.
-
-- [App Bar](https://material-ui.com/demos/app-bar/)
-- [Autocomplete](https://material-ui.com/demos/autocomplete/)
-  - No naitive component.  Multiple libraries are recommended in MUI. Launch wrapper component uses [react-select](https://react-select.com/home).
-- [Avatars](https://material-ui.com/demos/avatars/)
-- [Badges](https://material-ui.com/demos/badges/)
-- Bottom Navigation
-- Buttons
-- Cards
-- Checkbox
-- Chips
-- CirclularProgress
-- CssBaseline
-- Dialogs
-- Dividers
-- Drawers
-- Expansion Panels
-- Grid List
-- Lists
-- Menus
-- Paper
-- Pickers
-- Popover
-- Progress
-- Radio
-- Selection Controls
-- Selects
-- Snackbars
-- Steppers
-- Switch
-- Tables
-- Tabs
-- Text Fields
-- Tooltips
-- [Transitions](https://material-ui.com/utils/transitions/)
+All MUI components are accessible using the recommendations listed in their API.  If a component is not listed, use it directly from the MUI library.
 
 ## Custom Components
 
 The following components are custom components created by Launch. They may, or may not, include additional libraries.
 
+- [Autocomplete](https://material-ui.com/demos/autocomplete/)
+  - No naitive component.  Multiple libraries are recommended in MUI. Launch wrapper component uses [react-select](https://react-select.com/home).
 - Page
   - PageWrapper
     - Leverages MUI CssBaseline
@@ -68,15 +35,6 @@ The following components are custom components created by Launch. They may, or m
 - Footer
   - Global footer
 - DateTime
-  - uses html5
-- Link
-  - Dependent on react-router
-
-### Questionable
-
-The following components need discussion as to whether or not they deserve a wrapper component
-
-- Dialog -> Modal
-  - Do we want to include redux dependent components?
+  - native uses html5
+  - Wrapper
 - Notification Manager
-  - Do we want to include redux dependent components?

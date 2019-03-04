@@ -1,5 +1,3 @@
-![Launch](/src/images/launch-logo-white.svg)
-
 # Launch UI
 A Boilerplate Launch UI React Component Library based on Material UI
 

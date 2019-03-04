@@ -10,11 +10,6 @@ A Boilerplate Launch UI React Component Library based on Material UI
 - [ ] Component is built generic enough that it can be used by simply passing properties
 - [ ] If creating a wrapper on a 3rd party library (such as MUI), wrapper component must be warranted and add value
 
-
-Should we add these criteria?
-
-- [ ] Does/Does not require redux
-
 ## Material UI Components
 
 Using version: 3.9.2

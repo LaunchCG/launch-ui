@@ -1,5 +1,19 @@
+![Launch](/images/launch-logo-white.svg)
+
 # Launch UI
 A Boilerplate Launch UI React Component Library based on Material UI
+
+### Criteria for creating a Launch UI Component
+
+- [ ] Component is UI related
+- [ ] A common need across projects for component
+- [ ] Component is built generic enough that it can be used by simply passing properties
+- [ ] If creating a wrapper on a 3rd party library (such as MUI), wrapper component must be warranted and add value
+
+
+Should we add these criteria?
+
+- [ ] Does/Does not require redux
 
 ## Material UI Components
 
@@ -65,7 +79,7 @@ The following components are custom components created by Launch. They may, or m
 - Link
   - Dependent on react-router
 
-## Questionable
+### Questionable
 
 The following components need discussion as to whether or not they deserve a wrapper component
 

@@ -5,17 +5,22 @@ A Boilerplate Launch UI React Component Library based on Material UI
 
 Using version: 3.9.2
 
-All MUI components are accessible using the recommendations listed in their API.  Some components have custom wrapper components.  Custom wrapper components have descriptions below.  If a component does not have a description, use it directly from the MUI library.
+All MUI components are accessible using the recommendations listed in their API.  Some components have custom wrapper components.  Custom wrapper components have descriptions below.  If a component is not listed, or does not have a description, use it directly from the MUI library.
 
-- App Bar
-- Autocomplete
+- [App Bar](https://material-ui.com/demos/app-bar/)
+- [Autocomplete](https://material-ui.com/demos/autocomplete/)
   - No naitive component.  Multiple libraries are recommended in MUI. Launch wrapper component uses [react-select](https://react-select.com/home).
-- Avatars
-- Badges
+- [Avatars](https://material-ui.com/demos/avatars/)
+- Backdrop
+- [Badges](https://material-ui.com/demos/badges/)
 - Bottom Navigation
 - Buttons
 - Cards
+- Checkbox
 - Chips
+- CirclularProgress
+- Collapse
+- CssBaseline
 - Dialogs
 - Dividers
 - Drawers
@@ -34,14 +39,26 @@ All MUI components are accessible using the recommendations listed in their API.
 - Tabs
 - Text Fields
 - Tooltips
+- [Transitions](https://material-ui.com/utils/transitions/)
 
 ## Custom Components
 
 The following components are custom components created by Launch. They may, or may not, include additional libraries.
 
 - Page
+  - PageWrapper
+    - Leverages MUI CssBaseline
+    - allows for a full bleed design
+  - PageTitle
+    - Page title/hero
+  - PageSubTitle
+    - Page subtitle
+  - PageContent
+    - Main body content for Page
 - Header
+  - Global header
 - Footer
+  - Global footer
 - DateTime
 - Link
 - Markdown

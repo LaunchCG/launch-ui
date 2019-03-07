@@ -27,7 +27,7 @@ class PageWrapper extends PureComponent {
             {children}
           </PageContext.Provider>
         </main>
-    </Fragment>
+      </Fragment>
     )
   }
 }

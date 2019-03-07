@@ -1,3 +1,15 @@
+/* TODO: Need to include instructions on adding these css styles to project */
+html, body, #root, .app {
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+/* end TODO */
+
 body {
   margin: 0;
   padding: 0;

@@ -1,20 +1,16 @@
-import React, { PureComponent, Fragment } from 'react'
+import React, { PureComponent } from 'react'
 import { withStyles } from '@material-ui/core/styles'
 import classNames from 'classnames'
-import PageContext from './PageContext'
 import PropTypes from 'prop-types'
 
-class PageContent extends PureComponent {
+class Header extends PureComponent {
   render() {
     const {
       classes,
-      rootClass,
+      headerClass,
       fullBleedClass,
-      contentClass,
-      children,
       fullBleed,
-      flexGrow,
-      style,
+      children,
       breakpoints,
       ...props } = this.props
 
@@ -23,49 +19,31 @@ class PageContent extends PureComponent {
       fullBleedClasses = classNames(classes.fullBleed, fullBleedClass)
     }
 
-    const contentClasses = classNames(
-      (breakpoints) ? classes.contentBreakpoints : null,
-      contentClass || classes.content
+    const headerClasses = classNames(
+      (breakpoints) ? classes.headerBreakpoints : null,
+      headerClass || classes.header
     )
 
-    const rootStyle = {
-      flexGrow: flexGrow.toString() || 1
-    }
-
-    return (
-      <PageContext.Consumer>
-        {pageContext => (
-          <section
-            className={classNames(classes.root, fullBleedClasses)}
-            style={rootStyle}
-            {...props}
-          >
-            <div className={contentClasses} style={style}>
-              {children}
-            </div>
-          </section>
-        )}
-      </PageContext.Consumer>
+    return(
+      <div className={fullBleedClasses}>
+        <header className={headerClasses} {...props}>
+          {children}
+        </header>
+      </div>
     )
   }
 }
 
 const styles = theme => {
-  const { palette } = theme
   const { xs, sm, md, lg, xl } = theme.breakpoints.values
-
   return {
-    root: {
-      width: '100%',
-      backgroundColor: palette.background.default
-    },
     fullBleed: {
       width: '100%'
     },
-    content: {
+    header: {
       width: 'auto'
     },
-    contentBreakpoints: {
+    headerBreakpoints: {
       marginLeft: theme.spacing.unit * 3,
       marginRight: theme.spacing.unit * 3,
       [theme.breakpoints.up(xs + theme.spacing.unit * 3 * 2)]: {
@@ -89,22 +67,20 @@ const styles = theme => {
   }
 }
 
-const PageContentContainer = withStyles(styles)(PageContent)
+const HeaderContainer = withStyles(styles)(Header)
 
-PageContentContainer.propTypes = {
+HeaderContainer.propTypes = {
+  headerClass: PropTypes.string,
   fullBleedClass: PropTypes.string,
-  contentClass: PropTypes.string,
   fullBleed: PropTypes.bool,
-  flexGrow: PropTypes.number,
   breakpoints: PropTypes.bool
 }
 
-PageContentContainer.defaultProps = {
+HeaderContainer.defaultProps = {
+  headerClass: '',
   fullBleedClass: '',
-  contentClass: '',
   fullBleed: false,
-  flexGrow: 1,
   breakpoints: false
 }
 
-export default PageContentContainer
+export default HeaderContainer

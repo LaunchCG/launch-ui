@@ -24,13 +24,19 @@ class PageFooter extends PureComponent {
 }
 
 PageFooter.propTypes = {
+  fullBleedClass: PropTypes.string,
+  contentClass: PropTypes.string,
   fullBleed: PropTypes.bool,
-  flexGrow: PropTypes.number
+  flexGrow: PropTypes.number,
+  breakpoints: PropTypes.bool
 }
 
 PageFooter.defaultProps = {
+  fullBleedClass: '',
+  contentClass: '',
   fullBleed: false,
-  flexGrow: 0
+  flexGrow: 0,
+  breakpoints: false
 }
 
 export default PageFooter

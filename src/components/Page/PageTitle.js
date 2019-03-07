@@ -25,13 +25,19 @@ class PageTitle extends PureComponent {
 }
 
 PageTitle.propTypes = {
+  fullBleedClass: PropTypes.string,
+  contentClass: PropTypes.string,
   fullBleed: PropTypes.bool,
-  flexGrow: PropTypes.number
+  flexGrow: PropTypes.number,
+  breakpoints: PropTypes.bool
 }
 
 PageTitle.defaultProps = {
+  fullBleedClass: '',
+  contentClass: '',
   fullBleed: false,
-  flexGrow: 0
+  flexGrow: 0,
+  breakpoints: false
 }
 
 export default PageTitle

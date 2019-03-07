@@ -8,6 +8,7 @@ import { withNotes } from '@storybook/addon-notes'
 import button from './index/button'
 import typography from './index/typography'
 import link from './index/link'
+import page from './index/page'
 
 // themes
 import { themeConfig as themeLaunchConfig } from '../src/themes/themeLaunch'

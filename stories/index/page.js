@@ -14,7 +14,7 @@ addDecorator(withNotes)
 
 export default (
   storiesOf('Page', module)
-    .addWithJSX('Primary', () => (
+    .addWithJSX('Summary', () => (
       <div>
         Page Wrapper
         <PageWrapper style={{
@@ -46,8 +46,45 @@ export default (
         </PageWrapper>
       </div>
     ))
+  .addWithJSX('PageWrapper', () => (
+      <PageWrapper style={{
+          border: 'solid #000 1px',
+          margin: '5px 0px',
+          padding: '5px 0px'
+        }}>
+        Page Wrapper
+      </PageWrapper>
+    ),
+    { notes: 'The Page Wrapper...' }
+  )
+  .addWithJSX('PageTitle', () => (
+      <PageTitle style={{
+          border: 'solid #000 1px',
+          margin: '5px 0px',
+          padding: '5px 0px'
+        }}>
+        Page Title
+      </PageTitle>
+    ),
+    { notes: 'The Page Title...' }
+  )
+  .addWithJSX('PageContent', () => (
+      <PageContent style={{
+          border: 'solid #000 1px',
+          margin: '5px 0px',
+          padding: '5px 0px'
+        }}>
+        Page Content
+      </PageContent>
+    ),
+    { notes: 'The Page Content...' }
+  )
   .addWithJSX('PageFooter', () => (
-      <PageFooter>
+      <PageFooter style={{
+          border: 'solid #000 1px',
+          margin: '5px 0px',
+          padding: '5px 0px'
+        }}>
         Page Footer
       </PageFooter>
     ),

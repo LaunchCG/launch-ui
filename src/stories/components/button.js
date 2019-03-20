@@ -1,30 +1,9 @@
 import React from 'react'
 import { storiesOf, configure, addDecorator } from '@storybook/react'
-import Button from '../../components/Button'
+import Button from '@material-ui/core/Button'
 
 export default (
   storiesOf('Button', module)
-    // .addParameters({
-    //   info: {
-    //     //propTables: [MUIButton]
-    //   }
-    // })
-    // .add(
-    //   'Default',
-    //   withInfo({
-    //     text: 'Button Text goes here...'
-    //   })(() => ( <Button>Default Button</Button> ))
-    // )
-    // .add('Primary Contained', () => (
-    //     <Button variant="contained" color="primary">Primary Contained Button</Button>
-    //   ),
-    //   {
-    //     info: {
-    //       text: 'This is a primary button',
-    //       propTablesExclude: [MUIButton]
-    //     }
-    //   }
-    // )
     .add('Default', () => (
       <Button>Default Button</Button>
     ))

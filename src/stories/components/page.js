@@ -6,16 +6,6 @@ import PageWrapper, { PageTitle, PageFooter, PageContent } from '../../component
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 
-// import JSXAddon from 'storybook-addon-jsx'
-// setAddon(JSXAddon)
-
-const pageWidth = {
-  xl: '95%',
-  lg: '85%',
-  md: '75%',
-  sm: '60%'
-}
-
 addDecorator(withNotes)
 
 const styleBorder = {
@@ -28,7 +18,7 @@ const styleBorder = {
 
 export default (
   storiesOf('Page', module)
-    .addWithJSX('Default Full Page', () => (
+    .add('Default Full Page', () => (
       <div>
         <Header style={styleBorder}>
           Header
@@ -54,7 +44,7 @@ export default (
         </Footer>
       </div>
     ))
-    .addWithJSX('Full Page with Breakpoints', () => (
+    .add('Full Page with Breakpoints', () => (
       <div>
         <Header style={styleBorder} breakpoints>
           Header
@@ -80,31 +70,31 @@ export default (
         </Footer>
       </div>
     ))
-  .addWithJSX('Header', () => (
+  .add('Header', () => (
       <Header style={styleBorder}>
         Header
       </Header>
     ))
-  .addWithJSX('Footer', () => (
+  .add('Footer', () => (
       <Footer style={styleBorder}>
         Footer
       </Footer>
     ))
-  .addWithJSX('PageWrapper', () => (
+  .add('PageWrapper', () => (
       <PageWrapper style={styleBorder}>
         Page Wrapper
       </PageWrapper>
     ),
     { notes: 'The Page Wrapper...' }
   )
-  .addWithJSX('PageTitle', () => (
+  .add('PageTitle', () => (
       <PageTitle style={styleBorder}>
         Page Title
       </PageTitle>
     ),
     { notes: 'The Page Title...' }
   )
-  .addWithJSX('PageContent', () => (
+  .add('PageContent', () => (
       <PageContent style={styleBorder}>
         Page Content
       </PageContent>

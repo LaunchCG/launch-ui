@@ -25,9 +25,7 @@ addDecorator(
 setAddon(JSXAddon)
 
 function loadStories() {
-  require('../src/stories/start.js')
-  //require('../src/stories/components.js')
-  //require('../src/stories/index.js')
+  require('../src/stories/index.js')
 }
 
 configure(loadStories, module)

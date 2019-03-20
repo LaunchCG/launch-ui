@@ -4,51 +4,51 @@ import Typography from '@material-ui/core/Typography'
 
 export default (
   storiesOf('Typography', module)
-    .addWithJSX('h1', () => (
+    .add('h1', () => (
       <Typography variant="h1">h1. Heading</Typography>
     ))
-    .addWithJSX('h2', () => (
+    .add('h2', () => (
       <Typography variant="h2">h2. Heading</Typography>
     ))
-    .addWithJSX('h3', () => (
+    .add('h3', () => (
       <Typography variant="h3">h3. Heading</Typography>
     ))
-    .addWithJSX('h4', () => (
+    .add('h4', () => (
       <Typography variant="h4">h4. Heading</Typography>
     ))
-    .addWithJSX('h5', () => (
+    .add('h5', () => (
       <Typography variant="h5">h5. Heading</Typography>
     ))
-    .addWithJSX('h6', () => (
+    .add('h6', () => (
       <Typography variant="h6">h6. Heading</Typography>
     ))
-    .addWithJSX('subtitle', () => (
+    .add('subtitle', () => (
       <Typography variant="subtitle1">subtitle1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur</Typography>
     ))
-    .addWithJSX('subtitle', () => (
+    .add('subtitle', () => (
       <Typography variant="subtitle2">subtitle2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur</Typography>
     ))
-    .addWithJSX('body1', () => (
+    .add('body1', () => (
       <Typography variant="body1">
         body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
         unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam
         dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
       </Typography>
     ))
-    .addWithJSX('body2', () => (
+    .add('body2', () => (
       <Typography variant="body2">
         body2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
         unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam
         dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
       </Typography>
     ))
-    .addWithJSX('button', () => (
+    .add('button', () => (
       <Typography variant="button">button text</Typography>
     ))
-    .addWithJSX('caption', () => (
+    .add('caption', () => (
       <Typography variant="caption">caption text</Typography>
     ))
-    .addWithJSX('overline', () => (
+    .add('overline', () => (
       <Typography variant="overline">overline text</Typography>
     ))
 )

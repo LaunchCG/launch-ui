@@ -25,19 +25,19 @@ export default (
     //     }
     //   }
     // )
-    .addWithJSX('Default', () => (
+    .add('Default', () => (
       <Button>Default Button</Button>
     ))
-    .addWithJSX('Primary Outlined', () => (
+    .add('Primary Outlined', () => (
       <Button variant="outlined" color="primary">Primary Outlined Button</Button>
     ))
-    .addWithJSX('Primary Text', () => (
+    .add('Primary Text', () => (
       <Button variant="text" color="primary">Primary Text Button</Button>
     ))
-    .addWithJSX('Secondary Contained', () => (
+    .add('Secondary Contained', () => (
       <Button variant="contained" color="secondary">Secondary Contained Button</Button>
     ))
-    .addWithJSX('Secondary', () => (
+    .add('Secondary', () => (
       <Button variant="text" color="secondary">Secondary Text Button</Button>
     ))
 )

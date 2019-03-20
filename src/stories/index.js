@@ -5,14 +5,14 @@ import { withNotes } from '@storybook/addon-notes'
 //import { withInfo } from '@storybook/addon-info'
 
 // components
-import button from './index/button'
-import typography from './index/typography'
-import link from './index/link'
-import page from './index/page'
+// import button from './index/button'
+// import typography from './index/typography'
+import link from './components/link'
+//import page from './index/page'
 
 // themes
-import { themeConfig as themeLaunchConfig } from '../src/themes/themeLaunch'
-import { themeConfig as themeDarkConfig } from '../src/themes/themeDark'
+import { themeConfig as themeLaunchConfig } from '../themes/themeLaunch'
+import { themeConfig as themeDarkConfig } from '../themes/themeDark'
 
 // you can specify only required fields overriding the `Launch Base Theme`
 const launchTheme = {

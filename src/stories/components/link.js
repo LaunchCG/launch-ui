@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf, configure, addDecorator } from '@storybook/react'
-import Link from '../../src/components/Link'
+import Link from '../../components/Link'
 
 export default (
   storiesOf('Link', module)

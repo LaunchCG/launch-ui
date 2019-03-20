@@ -1,22 +1,23 @@
 {
-  "name": "launch-ui",
+  "name": "launch-ui-ii",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.9.2",
-    "classnames": "^2.2.6",
-    "react": "^16.8.2",
-    "react-dom": "^16.8.2",
-    "react-scripts": "2.1.5",
+    "@material-ui/icons": "^3.0.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-scripts": "2.1.8",
     "storybook-addon-jsx": "^6.0.0"
   },
   "scripts": {
+    "start": "start-storybook -p 9009 -s public",
     "react-start": "react-scripts start",
-    "start": "start-storybook -p 9002 -c .storybook",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -28,13 +29,15 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@babel/core": "^7.3.3",
-    "@storybook/addon-info": "^4.1.13",
-    "@storybook/addon-notes": "^4.1.12",
-    "@storybook/addon-options": "^4.1.13",
-    "@storybook/addons": "^4.1.12",
-    "@storybook/react": "^4.1.12",
+    "@babel/core": "^7.3.4",
+    "@storybook/addon-actions": "^5.0.0",
+    "@storybook/addon-links": "^5.0.0",
+    "@storybook/addon-info": "^5.0.0",
+    "@storybook/addon-notes": "^5.0.0",
+    "@storybook/addon-options": "^5.0.0",
+    "@storybook/addons": "^5.0.0",
+    "@storybook/react": "^5.0.0",
     "babel-loader": "^8.0.5",
-    "storybook-addon-material-ui": "^0.9.0-alpha.16"
+    "storybook-addon-material-ui": "^0.9.0-alpha.17"
   }
 }

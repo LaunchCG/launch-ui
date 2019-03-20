@@ -1,13 +1,15 @@
 import { addDecorator, configure, setAddon } from '@storybook/react'
 import { withOptions } from '@storybook/addon-options'
 import { withInfo } from '@storybook/addon-info'
+
+//import { jsxDecorator } from 'storybook-addon-jsx'
 import JSXAddon from 'storybook-addon-jsx'
 
 addDecorator(
   withInfo({
     inline: true,
     header: false,
-    source: false
+    source: true
   })) // should be declared FIRST
 
 addDecorator(
@@ -18,11 +20,14 @@ addDecorator(
   })
 )
 
+//addDecorator(jsxDecorator)
+
 setAddon(JSXAddon)
 
 function loadStories() {
-  require('../stories/start.js')
-  require('../stories/index.js')
+  require('../src/stories/start.js')
+  //require('../src/stories/components.js')
+  //require('../src/stories/index.js')
 }
 
 configure(loadStories, module)

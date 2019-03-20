@@ -2,9 +2,12 @@ import React from 'react'
 import { addDecorator, storiesOf } from '@storybook/react'
 import { withNotes } from '@storybook/addon-notes'
 
-import PageWrapper, { PageTitle, PageFooter, PageContent } from '../../src/components/Page'
-import Header from '../../src/components/Header'
-import Footer from '../../src/components/Footer'
+import PageWrapper, { PageTitle, PageFooter, PageContent } from '../../components/Page'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
+
+// import JSXAddon from 'storybook-addon-jsx'
+// setAddon(JSXAddon)
 
 const pageWidth = {
   xl: '95%',
@@ -108,7 +111,7 @@ export default (
     ),
     { notes: 'The Page Content...' }
   )
-  .addWithJSX('PageFooter', () => (
+  .add('PageFooter', () => (
       <PageFooter style={styleBorder}>
         Page Footer
       </PageFooter>

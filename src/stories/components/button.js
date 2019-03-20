@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf, configure, addDecorator } from '@storybook/react'
-import Button from '../../src/components/Button'
+import Button from '../../components/Button'
 
 export default (
   storiesOf('Button', module)

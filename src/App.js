@@ -3,7 +3,7 @@ import launchLogo from './images/launch-logo.png'
 import { withStyles } from '@material-ui/core/styles'
 import './App.css'
 
-import Link from './components/Link'
+import Link from '@material-ui/core/Link'
 
 class App extends Component {
   render() {

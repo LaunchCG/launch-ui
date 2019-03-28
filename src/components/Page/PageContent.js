@@ -56,8 +56,7 @@ const styles = theme => {
 
   return {
     root: {
-      width: '100%',
-      backgroundColor: palette.background.default
+      width: '100%'
     },
     fullBleed: {
       width: '100%'

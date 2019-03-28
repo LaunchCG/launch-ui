@@ -6,8 +6,8 @@ import ControlWrapper from './ControlWrapper'
 
 import Paper from '@material-ui/core/Paper'
 
-import Button from '../../components/Button'
-import Link from '../../components/Link'
+import Button from '@material-ui/core/Button'
+import Link from '@material-ui/core/Link'
 import Typography from '@material-ui/core/Typography'
 
 class ThemeOverview extends Component {

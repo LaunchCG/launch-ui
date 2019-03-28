@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { withStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 
-import Link from '../components/Link'
+import Link from '@material-ui/core/Link'
 
 class Config extends Component {
   render() {

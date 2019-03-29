@@ -1,12 +1,19 @@
 import React from 'react'
 import { storiesOf, configure, addDecorator } from '@storybook/react'
 import DateTime from '../../components/DateTime'
+import { withInfo } from '@storybook/addon-info'
 
 export default (
   storiesOf('DateTime', module)
+    .addDecorator(
+      withInfo({
+        inline: true,
+        header: false,
+        source: true
+      })) // should be declared FIRST
     .add('DateTime', () => (
       <DateTime
-        label='Date Time'
+        label='Date Time with Default Values'
         type='datetime-local'
         defaultCurrentDateTime
       />
@@ -15,14 +22,12 @@ export default (
       <DateTime
         label='Time'
         type='time'
-        defaultCurrentDateTime
       />
     ))
     .add('Time with Input Props', () => (
       <DateTime
         type='time'
         label='Time'
-        defaultCurrentDateTime
         inputProps={{
           step: 300 // incriment by 5min
         }}
@@ -33,7 +38,6 @@ export default (
         label='Date'
         label='Date'
         type='date'
-        defaultCurrentDateTime
       />
     ))
 )

@@ -9,27 +9,27 @@ class Install extends Component {
     const { classes } = this.props
     return (
       <div>
-        <Typography variant="h3">Instructions for installing</Typography>
+        <Typography variant="h3" classes={classes.h}>Instructions for installing</Typography>
 
-        <Typography variant="h4">Install</Typography>
+        <Typography variant="h4" classes={classes.h}>Install</Typography>
         <Typography style={{marginBottom: '10vh'}}>Coming soon</Typography>
 
-        <Typography variant="h4">Configure Theme</Typography>
-        <Typography variant="h5">Palette</Typography>
+        <Typography variant="h4" classes={classes.h}>Configure Theme</Typography>
+        <Typography variant="h5" classes={classes.h}>Palette</Typography>
         <ol>
           <li>Modfiy the theme file at: /themes/</li>
           <li>Overwrite the palette colors for `const palette`</li>
           <li>Add/remove colors as needed.  Modify `const themeConfig.palette` if needed</li>
         </ol>
 
-        <Typography variant="h5">Fonts</Typography>
+        <Typography variant="h5" classes={classes.h}>Fonts</Typography>
         <ol>
           <li>Modfiy the theme file at: /themes/</li>
           <li>Overwrite the fonts for `const fonts`</li>
           <li>Add/remove fonts as needed.  Modify `const themeConfig.typography` if needed</li>
         </ol>
 
-        <Typography variant="h5">Common Issues</Typography>
+        <Typography variant="h5" classes={classes.h}>Common Issues</Typography>
         <ul>
           <li>Overrides</li>
           <ul>
@@ -47,6 +47,12 @@ const styles = theme => {
   return {
     paper: {
       padding: '50px 20px'
+    },
+    h1: {
+      marginBottom: 'calc(5px + 2vh)'
+    },
+    h: {
+      marginBottom: '.5em'
     }
   }
 }

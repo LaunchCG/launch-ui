@@ -30,13 +30,15 @@ class DateTime extends PureComponent {
         default:
           defaultValue = null
       }
-      console.log('defaultValue',defaultValue);
     }
 
     return (
       <TextField
         type={type}
         defaultValue={defaultValue}
+        InputLabelProps={{
+            shrink: true,
+          }}
         {...props}
       />
     )

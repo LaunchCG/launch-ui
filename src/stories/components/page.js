@@ -1,6 +1,7 @@
 import React from 'react'
 import { addDecorator, storiesOf } from '@storybook/react'
 import { withNotes } from '@storybook/addon-notes'
+import { withInfo } from '@storybook/addon-info'
 
 import PageWrapper, { PageTitle, PageFooter, PageContent } from '../../components/Page'
 import Header from '../../components/Header'
@@ -18,6 +19,12 @@ const styleBorder = {
 
 export default (
   storiesOf('Page', module)
+    .addDecorator(
+      withInfo({
+        inline: true,
+        header: false,
+        source: false
+      })) // should be declared FIRST
     .add('Default Full Page', () => (
       <div>
         <Header style={styleBorder}>
@@ -96,7 +103,8 @@ export default (
       <Header style={styleBorder}>
         Header
       </Header>
-    ))
+    ),
+    { notes: `<Header>...</Header>` })
   .add('Footer', () => (
       <Footer style={styleBorder}>
         Footer
@@ -107,27 +115,41 @@ export default (
         Page Wrapper
       </PageWrapper>
     ),
-    { notes: 'The Page Wrapper...' }
+    { notes: `
+      <PageWrapper>\n
+        PageTitle, PageContent and/or PageFooter children recommended\n
+      </PageWrapper>` }
   )
   .add('PageTitle', () => (
       <PageTitle style={styleBorder}>
         Page Title
       </PageTitle>
     ),
-    { notes: 'The Page Title...' }
+    { notes: `
+      <PageWrapper>\n
+        <PageTitle>...</PageTitle>\n
+      </PageWrapper>` }
   )
   .add('PageContent', () => (
       <PageContent style={styleBorder}>
         Page Content
       </PageContent>
     ),
-    { notes: 'The Page Content...' }
+    { notes: `
+      <PageWrapper>\n
+        <PageContent>\n
+          ...\n
+        </PageContent>\n
+      </PageWrapper>` }
   )
   .add('PageFooter', () => (
       <PageFooter style={styleBorder}>
         Page Footer
       </PageFooter>
     ),
-    { notes: 'The Page Footer appears at the bottom of the page, above the global Footer (if used).' }
+    { notes: `
+      <PageWrapper>\n
+        <PageFooter>...</PageFooter>\n
+      </PageWrapper>` }
   )
 )

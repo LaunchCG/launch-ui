@@ -10,11 +10,11 @@ class DateTime extends PureComponent {
     let defaultValue = null
     if (defaultCurrentDateTime) {
       const date = new Date()
-      const year = date.getUTCFullYear().toString().padStart(4, 0)
-      const month = (date.getUTCMonth() + 1).toString().padStart(2, 0)
-      const day = date.getUTCDate().toString().padStart(2, 0)
-      const hour = date.getUTCHours()
-      const minute = date.getUTCMinutes()
+      const year = date.getFullYear().toString().padStart(4, 0)
+      const month = (date.getMonth() + 1).toString().padStart(2, 0)
+      const day = date.getDate().toString().padStart(2, 0)
+      const hour = date.getHours().toString().padStart(2, 0)
+      const minute = date.getMinutes().toString().padStart(2, 0)
 
       // set the default dateTime value
       switch (type) {
@@ -30,6 +30,7 @@ class DateTime extends PureComponent {
         default:
           defaultValue = null
       }
+      console.log('defaultValue',defaultValue);
     }
 
     return (

@@ -6,7 +6,7 @@ import { action } from '@storybook/addon-actions'
 import { linkTo } from '@storybook/addon-links'
 
 import App from '../App'
-import { ThemeOverview, Swatch, Config } from '../start'
+import { ThemeOverview, Swatch, Install } from '../start'
 
 import { Button, Welcome } from '@storybook/react/demo'
 
@@ -33,11 +33,11 @@ addDecorator(muiTheme([
 
 export default (
   storiesOf('Start', module)
-    .add('Home', () => (
-      <App />
-    ))
-    .add('Config', () => (
-      <Config />
+    // .add('Home', () => (
+    //   <App />
+    // ))
+    .add('Install', () => (
+      <Install />
     ))
     .add('Theme Overview', () => (
         <ThemeOverview />

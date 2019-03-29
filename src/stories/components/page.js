@@ -43,7 +43,18 @@ export default (
           Footer
         </Footer>
       </div>
-    ))
+    ),
+    { notes: `
+      <Header>...</Header>\n
+      <PageWrapper>\n
+        <PageTitle>...</PageTitle>\n
+        <PageContent>\n
+          ...\n
+        </PageContent>\n
+        <PageFooter>...</PageFooter>\n
+      </PageWrapper>\n
+      <Footer>...</Footer>` }
+    )
     .add('Full Page with Breakpoints', () => (
       <div>
         <Header style={styleBorder} breakpoints>
@@ -69,7 +80,18 @@ export default (
           Footer
         </Footer>
       </div>
-    ))
+    ),
+    { notes: `
+      <Header breakpoints>...</Header>\n
+      <PageWrapper>\n
+        <PageTitle breakpoints>...</PageTitle>\n
+        <PageContent>\n
+          ...\n
+        </PageContent breakpoints>\n
+        <PageFooter breakpoints>...</PageFooter>\n
+      </PageWrapper>\n
+      <Footer breakpoints>...</Footer>` }
+  )
   .add('Header', () => (
       <Header style={styleBorder}>
         Header

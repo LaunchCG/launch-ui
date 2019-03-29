@@ -4,28 +4,32 @@ import Typography from '@material-ui/core/Typography'
 
 import Link from '@material-ui/core/Link'
 
-class Config extends Component {
+class Install extends Component {
   render() {
     const { classes } = this.props
     return (
       <div>
-        <Typography variant="h2">Instructions for configuring theme</Typography>
+        <Typography variant="h3">Instructions for installing</Typography>
 
-        <Typography variant="h4">Palette</Typography>
+        <Typography variant="h4">Install</Typography>
+        <Typography style={{marginBottom: '10vh'}}>Coming soon</Typography>
+
+        <Typography variant="h4">Configure Theme</Typography>
+        <Typography variant="h5">Palette</Typography>
         <ol>
           <li>Modfiy the theme file at: /themes/</li>
           <li>Overwrite the palette colors for `const palette`</li>
           <li>Add/remove colors as needed.  Modify `const themeConfig.palette` if needed</li>
         </ol>
 
-        <Typography variant="h4">Fonts</Typography>
+        <Typography variant="h5">Fonts</Typography>
         <ol>
           <li>Modfiy the theme file at: /themes/</li>
           <li>Overwrite the fonts for `const fonts`</li>
           <li>Add/remove fonts as needed.  Modify `const themeConfig.typography` if needed</li>
         </ol>
 
-        <Typography variant="h4">Common Issues</Typography>
+        <Typography variant="h5">Common Issues</Typography>
         <ul>
           <li>Overrides</li>
           <ul>
@@ -47,4 +51,4 @@ const styles = theme => {
   }
 }
 
-export default withStyles(styles)(Config)
+export default withStyles(styles)(Install)

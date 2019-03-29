@@ -1,9 +1,9 @@
 import ThemeOverview from './ThemeOverview'
 import Swatch from './Swatch'
-import Config from './Config'
+import Install from './Install'
 
 export {
   ThemeOverview,
   Swatch,
-  Config
+  Install
 }

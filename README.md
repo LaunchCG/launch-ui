@@ -19,6 +19,7 @@ All MUI components are accessible using the recommendations listed in their API.
 The following components are custom components created by Launch. They may, or may not, include additional libraries.
 
 - [Autocomplete](https://material-ui.com/demos/autocomplete/)
+  - Not yet developed
   - No naitive component.  Multiple libraries are recommended in MUI. Launch wrapper component uses [react-select](https://react-select.com/home).
 - Page
   - PageWrapper
@@ -36,5 +37,5 @@ The following components are custom components created by Launch. They may, or m
   - Global footer
 - DateTime
   - native uses html5
-  - Wrapper
 - Notification Manager
+  - Not yet developed. Leverage from the [data 360](https://github.com/LaunchCG/data360-demo-web/blob/feature/context-based-alerts/src/NotificationSystem/NotificationSystem.js) project.

@@ -53,24 +53,29 @@ const themeConfig = {
       fontFamily: fonts.regular
     },
     h6: {
-      fontFamily: fonts.regular
+      fontFamily: fonts.regular,
+      marginBottom: '.5em'
     },
     h5: {
-      fontFamily: fonts.regular
+      fontFamily: fonts.regular,
+      marginBottom: '.5em'
     },
     h4: {
-      fontFamily: fonts.regular
+      fontFamily: fonts.regular,
+      marginBottom: '.5em'
     },
     h3: {
-      fontFamily: fonts.regular
+      fontFamily: fonts.regular,
+      marginBottom: '.5em'
     },
     h2: {
       fontFamily: fonts.regular,
-      marginTop: 'calc(10px + 2vh)',
-      marginBottom: 'calc(5px + 2vh)',
+      marginBottom: '.5em'
     },
     h1: {
-      fontFamily: fonts.regular
+      fontFamily: fonts.regular,
+      marginTop: 'calc(10px + 2vh)',
+      marginBottom: 'calc(5px + 2vh)',
     },
     button: {
       fontFamily: fonts.regular

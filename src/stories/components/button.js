@@ -3,7 +3,7 @@ import { storiesOf, configure, addDecorator } from '@storybook/react'
 import Button from '@material-ui/core/Button'
 
 export default (
-  storiesOf('Button', module)
+  storiesOf('MUI Button', module)
     .add('Default', () => (
       <Button>Default Button</Button>
     ))

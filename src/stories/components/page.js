@@ -104,12 +104,15 @@ export default (
         Header
       </Header>
     ),
-    { notes: `<Header>...</Header>` })
+    { notes: `< Header>...</Header>` }
+  )
   .add('Footer', () => (
       <Footer style={styleBorder}>
         Footer
       </Footer>
-    ))
+    ),
+    { notes: `< Footer>...</Footer>` }
+  )
   .add('PageWrapper', () => (
       <PageWrapper style={styleBorder}>
         Page Wrapper

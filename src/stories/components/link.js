@@ -3,7 +3,7 @@ import { storiesOf, configure, addDecorator } from '@storybook/react'
 import Link from '@material-ui/core/Link'
 
 export default (
-  storiesOf('Link', module)
+  storiesOf('MUI Link', module)
     .addParameters({ options: { addonPanelInRight: false } })
     .add('Default', () => {
         return (

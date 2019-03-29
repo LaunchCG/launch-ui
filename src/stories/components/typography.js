@@ -3,7 +3,7 @@ import { storiesOf, configure, addDecorator } from '@storybook/react'
 import Typography from '@material-ui/core/Typography'
 
 export default (
-  storiesOf('Typography', module)
+  storiesOf('MUI Typography', module)
     .add('h1', () => (
       <Typography variant="h1">h1. Heading</Typography>
     ))

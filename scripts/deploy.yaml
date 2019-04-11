@@ -30,6 +30,8 @@ spec:
     spec:
       containers:
       - name: master
-        image: launchcg/launch-ui:1.0.0
+        image: 953185573346.dkr.ecr.us-west-2.amazonaws.com/launchcg/launch-ui:1.0.0
         ports:
         - containerPort: 9009
+      imagePullSecrets:
+      - name: regcred

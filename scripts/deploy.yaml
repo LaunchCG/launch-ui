@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: launch-ui
+  labels:
+    app: launch-ui
+spec:
+  type: LoadBalancer
+  externalIPs:
+  - 10.0.2.15
+  ports:
+  - port: 9009
+    targetPort: 9009
+  selector:
+    app: launch-ui
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: launch-ui
+spec:
+  selector:
+    matchLabels:
+      app: launch-ui
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: launch-ui
+    spec:
+      containers:
+      - name: master
+        image: launchcg/launch-ui:1.0.0
+        ports:
+        - containerPort: 9009

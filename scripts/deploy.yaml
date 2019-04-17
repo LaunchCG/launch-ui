@@ -6,13 +6,13 @@ metadata:
     app: launch-ui
 spec:
   type: LoadBalancer
-  externalIPs:
-  - 10.0.2.15
   ports:
-  - port: 9009
+  - port: 80
     targetPort: 9009
   selector:
     app: launch-ui
+  externalIPs:
+  - 172.31.29.239
 ---
 apiVersion: apps/v1
 kind: Deployment
